@@ -12,8 +12,12 @@ layout="wide"
 
 # Load Model + Encoders
 
-model = pickle.load(open("model.pkl", "rb"))
-encoders = pickle.load(open("encoders.pkl", "rb"))
+import os
+
+BASE_DIR = os.path.dirname(file)
+
+model = pickle.load(open(os.path.join(BASE_DIR, "model.pkl"), "rb"))
+encoders = pickle.load(open(os.path.join(BASE_DIR, "encoders.pkl"), "rb"))
 
 # Custom Styling
 

@@ -14,7 +14,7 @@ layout="wide"
 
 import os
 
-BASE_DIR = os.path.dirname(file)
+BASE_DIR = os.path.dirname(__file__)
 
 model = pickle.load(open(os.path.join(BASE_DIR, "model.pkl"), "rb"))
 encoders = pickle.load(open(os.path.join(BASE_DIR, "encoders.pkl"), "rb"))
